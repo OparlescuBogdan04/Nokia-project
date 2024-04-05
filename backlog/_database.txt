@@ -1,0 +1,4 @@
+- created the sql file for db schema, data, and drop table
+
+TO DOS:
+- connect db with c#
