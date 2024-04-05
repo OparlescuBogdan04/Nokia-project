@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\User\Documents\Nokia\obj\Debug\
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\
 Nokia
 none
 false
 DEBUG;TRACE
-C:\Users\User\Documents\Nokia\App.xaml
-1219584333
+C:\Users\User\Documents\GitHub\Nokia-project\App.xaml
+2736615074
 
-6-502434485
+10-1753933760
 13-1310406943
-MainWindow.xaml;
+Login.xaml;MainWindow.xaml;
 
-True
+False
 
