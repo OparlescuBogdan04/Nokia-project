@@ -1,0 +1,8 @@
+
+*.cache
+obj/Debug/Nokia.csproj.AssemblyReference.cache
+*.vsidx
+.vs/Nokia/FileContentIndex/b397fbd9-3575-49c1-9dc1-a7c37ea30d75.vsidx
+.vs/Nokia/FileContentIndex/3e04c01a-bc3c-4256-9d1e-e29be0c09173.vsidx
+*.lock
+.vs/Nokia/v17/.suo
