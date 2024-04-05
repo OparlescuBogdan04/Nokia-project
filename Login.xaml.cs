@@ -24,13 +24,8 @@ namespace Nokia
         private void _Login_Click(object sender, RoutedEventArgs e)
         {
             bool can_log_in = UserLogin.VerifyCredentials(_Username.Text, _Password.Text);
-            if(can_log_in)
-            {
-                //To Do: static class that transitions between windows
-                MainWindow main = new MainWindow();
-                main.Show();
-                this.Hide();
-            }
+            if (can_log_in)
+                this.SwitchTo(new MainWindow());
         }
     }
 }
