@@ -1,12 +1,29 @@
 ﻿using System;
+using System.Windows.Controls;
 
 namespace Nokia
 {
     public static class UserLogin
     {
 
-        public static bool VerifyCredentials(string username, string password)
+        public static void LogMessage(TextBlock block,string message)
         {
+            //To Do
+            block.Text = message;
+            //set block message color
+        }
+
+        public static bool IsValidEmailFormat(string email)
+        {
+            //To Do
+            //verify for grep '<symbols>@<symbols>.<symbols>
+            return true;
+        }
+
+        public static bool VerifyCredentialsByMath(string username, string password)
+        {
+            if (username.Length < 2)
+                return false;
             return GetMath(username) == password;
         }
 

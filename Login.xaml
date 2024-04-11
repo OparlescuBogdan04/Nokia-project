@@ -6,17 +6,11 @@
         xmlns:local="clr-namespace:Nokia"
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800">
-    <Grid>
-
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#2051a2" Offset="0"/>
-                <GradientStop Color="#347fef" Offset="0.5"/>
-                <GradientStop Color="#2051a2" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-
+    <Grid Background="{StaticResource BackgroundGradient}">
         <Image HorizontalAlignment="Center" Height="84" Margin="0,50,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
+        
+        <!--Error msg-->
+        <TextBlock HorizontalAlignment="Center" Margin="0,164,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="311,202,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
         <TextBox x:Name="_Username" HorizontalAlignment="Center" Margin="0,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
