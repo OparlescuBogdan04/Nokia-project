@@ -35,3 +35,5 @@ C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\Nokia.pdb
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\CreateAnAccount.g.cs
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\App.baml
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\CreateAnAccount.baml
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\DebugConsole.g.cs
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\DebugConsole.baml

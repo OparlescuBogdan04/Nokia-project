@@ -9,6 +9,16 @@ namespace Nokia
 {
     public static class WindowDialogue
     {
+
+        public static void TerminalLog(string message)
+        {
+            DebugConsole.Instance.log(message);
+        }
+
+        public static void CreateNewInstance(Window window)
+        {
+            window.Show();
+        }
         public static void SwitchTo(this Window current,Window new_window)
         {
             double left = current.Left;
