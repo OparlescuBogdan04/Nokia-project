@@ -14,18 +14,21 @@ using System.Windows.Shapes;
 
 namespace Nokia
 {
-    public partial class Login : Window
+    /// <summary>
+    /// Interaction logic for CreateAnAccount.xaml
+    /// </summary>
+    public partial class CreateAnAccount : Window
     {
-        public Login()
+        public CreateAnAccount()
         {
             InitializeComponent();
         }
 
-        private void _Login_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool can_log_in = true;// UserLogin.VerifyCredentialsByMath(_Username.Text, _Password.Text);
-            if (can_log_in)
-                this.SwitchTo(new MainWindow());
+            string username = _Username.Text;
+            string email=_Email.Text;
+            string password = _Password.Text;
         }
     }
 }

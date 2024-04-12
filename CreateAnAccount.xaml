@@ -1,0 +1,35 @@
+﻿<Window x:Class="Nokia.CreateAnAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nokia"
+        mc:Ignorable="d"
+        Title="Create a new account" Height="450" Width="800">
+    <Grid Background="{StaticResource BackgroundGradient}">
+        <Image HorizontalAlignment="Center" Height="84" Margin="0,25,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
+
+        <!--Error message block-->
+        <TextBlock x:Name="_ErrorMsg" HorizontalAlignment="Center" Margin="0,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+        <!--Username-->
+        <TextBlock HorizontalAlignment="Left" Margin="313,143,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_Username" HorizontalAlignment="Left" Margin="312,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <!--Email-->
+        <TextBlock HorizontalAlignment="Left" Margin="312,201,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_Email" HorizontalAlignment="Left" Margin="311,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <!--Password-->
+        <TextBlock HorizontalAlignment="Left" Margin="310,249,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_Password" HorizontalAlignment="Left" Margin="309,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <!--Confirm Password-->
+        <TextBlock HorizontalAlignment="Left" Margin="310,304,0,0" TextWrapping="Wrap" Text="Confirm Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_ConfirmPsw" HorizontalAlignment="Left" Margin="309,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <!--Create a new account-->
+        <Button Content="Create a new account" HorizontalAlignment="Left" Margin="310,356,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>

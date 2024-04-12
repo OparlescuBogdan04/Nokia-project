@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:Nokia"
              StartupUri="Login.xaml">
     <Application.Resources>
-         
+
+        <!--<BitmapImage x:Key="NokiaWhiteLogo" UriSource="/Artwork/nokia_white.png"/>
+        <Style x:Key="NokiaLogoImgStyle" TargetType="Image">
+            <Setter Property="Width" Value="362"/>
+            <Setter Property="Height" Value="84"/>
+        </Style>-->
+        
+        <!--Shared background between windows-->
+        <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#2051a2" Offset="0"/>
+            <GradientStop Color="#347fef" Offset="0.5"/>
+            <GradientStop Color="#2051a2" Offset="1"/>
+        </LinearGradientBrush>
     </Application.Resources>
 </Application>
