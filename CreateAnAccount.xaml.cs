@@ -29,6 +29,9 @@ namespace Nokia
             string username = _Username.Text;
             string email=_Email.Text;
             string password = _Password.Text;
+            //create a new account using the credentials
+            //To Do
+            this.SwitchTo(new MainWindow());
         }
     }
 }

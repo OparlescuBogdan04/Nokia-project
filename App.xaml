@@ -17,5 +17,19 @@
             <GradientStop Color="#347fef" Offset="0.5"/>
             <GradientStop Color="#2051a2" Offset="1"/>
         </LinearGradientBrush>
+
+        <!--Transparent button background-->
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="Transparent">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
     </Application.Resources>
 </Application>

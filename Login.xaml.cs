@@ -27,5 +27,10 @@ namespace Nokia
             if (can_log_in)
                 this.SwitchTo(new MainWindow());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.SwitchTo(new CreateAnAccount());
+        }
     }
 }
