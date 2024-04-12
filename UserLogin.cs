@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Controls;
 
 namespace Nokia
@@ -15,9 +16,9 @@ namespace Nokia
 
         public static bool IsValidEmailFormat(string email)
         {
-            //To Do
-            //verify for grep '<symbols>@<symbols>.<symbols>
-            return true;
+            string pattern = @"^[a-zA-Z0-9+&*-]+(?:\.[a-zA-Z0-9+&-]+)@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}$";
+            Match m = Regex.Match(email, pattern, RegexOptions.IgnoreCase);
+            return m.Success;
         }
 
         public static bool VerifyCredentialsByMath(string username, string password)

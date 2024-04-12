@@ -10,26 +10,28 @@
         <Image HorizontalAlignment="Center" Height="84" Margin="0,25,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
 
         <!--Error message block-->
-        <TextBlock x:Name="_ErrorMsg" HorizontalAlignment="Center" Margin="0,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="_ErrorMsg" HorizontalAlignment="Center" Margin="0,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="Red"/>
 
         <!--Username-->
-        <TextBlock HorizontalAlignment="Left" Margin="313,143,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="_Username" HorizontalAlignment="Left" Margin="312,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="344,139,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_Username" HorizontalAlignment="Left" Margin="343,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
         <!--Email-->
-        <TextBlock HorizontalAlignment="Left" Margin="312,201,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="_Email" HorizontalAlignment="Left" Margin="311,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="343,197,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_Email" HorizontalAlignment="Left" Margin="342,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
 
         <!--Password-->
-        <TextBlock HorizontalAlignment="Left" Margin="310,249,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="_Password" HorizontalAlignment="Left" Margin="309,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="342,249,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_Password" HorizontalAlignment="Center" Margin="0,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
+
 
         <!--Confirm Password-->
-        <TextBlock HorizontalAlignment="Left" Margin="310,304,0,0" TextWrapping="Wrap" Text="Confirm Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="_ConfirmPsw" HorizontalAlignment="Left" Margin="309,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="342,304,0,0" TextWrapping="Wrap" Text="Confirm Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBox x:Name="_ConfirmPsw" HorizontalAlignment="Center" Margin="0,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
+
 
         <!--Create a new account-->
-        <Button Content="Create a new account" Style="{StaticResource TransparentStyle}" Foreground="Aqua" HorizontalAlignment="Left" Margin="310,356,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Create a new account" Style="{StaticResource TransparentStyle}" Foreground="Aqua" HorizontalAlignment="Left" Margin="341,352,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
     </Grid>
 </Window>

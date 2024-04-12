@@ -11,6 +11,18 @@
             return 0;
         }
 
+        public static bool ExistsInDB(string username)
+        {
+            //To Do
+            return false;
+        }
+
+        public static bool ExistsInDB(int user_id)
+        {
+            //To Do
+            return false;
+        }
+
         public static bool ExistsInDB(User user)
         {
             //To Do

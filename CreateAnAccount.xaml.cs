@@ -24,6 +24,36 @@ namespace Nokia
             InitializeComponent();
         }
 
+        #region user input validation checks
+        private bool CheckUsername()
+        {
+            //return uniqueness of username in raport to the UserDB
+            return (UserDB.ExistsInDB(_Username.Text) == false);
+        }
+
+        private bool CheckEmail()
+        {
+            return UserLogin.IsValidEmailFormat(_Email.Text);
+        }
+
+        private bool CheckPasswords()
+        {
+            return _Password == _ConfirmPsw;
+        }
+
+        #endregion
+
+        private void InvalidEmailCheck()
+        {
+            if (CheckEmail() == false)
+                _ErrorMsg.Text = "Invalid email address!";
+            else
+                _ErrorMsg.Text="";
+        }
+        private void _Email_LostFocus(object sender, RoutedEventArgs e)
+        {
+            InvalidEmailCheck();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string username = _Username.Text;
