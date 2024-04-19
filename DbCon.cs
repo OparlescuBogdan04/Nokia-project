@@ -41,22 +41,6 @@ namespace Nokia
             }
             catch (NpgsqlException ex)
             {
-                //To refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                ////When handling errors, you can your application's response based
-                ////on the error code.
-                //switch (ex.Code)
-                //{
-                //    case "28P01": // Invalid password
-                //        {
-                //            MessageBox.Show("Invalid username/password, please try again");
-                //            break;
-                //        }
-                //    default:
-                //        {
-                //            MessageBox.Show("Cannot connect to server. Contact administrator");
-                //            break;
-                //        }
-                //}
                 return false;
             }
         }
@@ -88,18 +72,17 @@ namespace Nokia
             {
                 //create command and assign the query and connection from the constructor
 
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, connection))
-                {
-					cmd.Parameters.AddWithValue("@Name", username);
-					
-                    cmd.Parameters.AddWithValue("@UserName", username);
-					
-                    cmd.Parameters.AddWithValue("@Mail", email);
+                NpgsqlCommand cmd = new NpgsqlCommand(query, connection));
 
-					cmd.Parameters.AddWithValue("@Team", "Default"); 
+				cmd.Parameters.AddWithValue("@Name", username);
 					
-                    cmd.Parameters.AddWithValue("@Admin", false);
-				}
+                cmd.Parameters.AddWithValue("@UserName", username);
+					
+                cmd.Parameters.AddWithValue("@Mail", email);
+
+				cmd.Parameters.AddWithValue("@Team", "Default"); 
+					
+                cmd.Parameters.AddWithValue("@Admin", false);
 
                 //Execute command
 
@@ -120,55 +103,56 @@ namespace Nokia
 
         }
 
-		public static void SelectResources()
-		{
-			string query = "SELECT UserName, Admin FROM Resources;";
+		//public static void SelectResources()
+		//{
+		//	string query = "SELECT UserName, Admin FROM Resources;";
 
-			count = 0;
+		//	int count = 0;
 
-			//Open connection
-			if (OpenConnection() == true)
-			{
-				//Create Command
-				using (NpgsqlCommand cmd = new NpgsqlCommand(query, connection))
-				{
-					//Create a data reader and Execute the command
-					using (NpgsqlDataReader dataReader = cmd.ExecuteReader())
-					{
-						while (dataReader.Read())
-						{
-							string usr = dataReader.GetString(0); 
-							string adm = dataReader.GetString(1);
+  //          //Open connection
+  //          if (OpenConnection() == true)
+  //          {
+  //              //Create Command
+  //              NpgsqlCommand cmd = new NpgsqlCommand(query, connection));
 
-							if (usr == Main.usern)
-							{
-								count = 1;
+  //              //Create a data reader and Execute the command
+  //              NpgsqlDataReader dataReader = cmd.ExecuteReader()) ;
 
-								if (adm.Contains("A"))
-								{
-									count = 2;
-									break;
-								}
+  //              while (dataReader.Read())
+  //              {
+  //                  string usr = dataReader.GetString(0);
 
-								if (adm.Contains("O"))
-								{
-									count = 3;
-									break;
-								}
+  //                  string adm = dataReader.GetString(1);
 
-								break;
-							}
-						}
-					}
-				}
-				//Close Connection
-				CloseConnection();
-			}
-			else
-			{
-				MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
-				return;
-			}
-		}
+  //                  if (usr == Main.usern)
+  //                  {
+  //                      count = 1;
+
+  //                      if (adm.Contains("A"))
+  //                      {
+  //                          count = 2;
+
+  //                          break;
+  //                      }
+
+  //                      if (adm.Contains("O"))
+  //                      {
+  //                          count = 3;
+                            
+  //                          break;
+  //                      }
+
+  //                      break;
+  //                  }
+  //              }
+  //              //Close Connection
+  //              CloseConnection();
+  //          }
+  //          else
+  //          {
+  //              MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
+  //              return;
+  //          }
+		//}
 	}
 }
