@@ -63,7 +63,7 @@ namespace Nokia
             string password = _Password.Text;
             //create a new account using the credentials
             //To Do
-            
+            DbCon.InsertUser(username, email, password);
             
             this.SwitchTo(new MainWindow());
         }
