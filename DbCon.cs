@@ -1,100 +1,66 @@
-private MySqlConnection connection;
+using Npgsql; // Add this namespace for PostgreSQL
 
+private NpgsqlConnection connection;
 private string server;
-
 private string database;
-
 private string uid;
-
 private string password;
 
 public DBConnect()
 {
-
 	Initialize();
-
 }
 
 //Initialize values
-
 private void Initialize()
 {
-
 	server = "127.0.0.1";
 
-	database = "Resources";
-
-	uid = "postgres";
-
-	password = "4825";
+	database = "db_DBNAME";
+	
+	uid = "TEST";
+	
+	password = "TEST";
 
 	string connectionString;
+	
+	connectionString = "Server=" + server + ";Port=5432;" + "Database=" +
+					   database + ";" + "User Id=" + uid + ";" + "Password=" + password + ";";
 
-	connectionString = "SERVER=" + server + ";PORT=5432;" + "DATABASE=" +
-
-	database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-
-
-	connection = new MySqlConnection(connectionString);
-
+	connection = new NpgsqlConnection(connectionString);
 }
 
 //open connection to database
-
 private bool OpenConnection()
 {
 	try
-
 	{
-
 		connection.Open();
 
 		return true;
-
 	}
-
-	catch (MySqlException ex)
-
+	catch (NpgsqlException ex)
 	{
-
 		//When handling errors, you can your application's response based
-
-		//on the error number.
-
-		//The two most common error numbers when connecting are as follows:
-
-		//0: Cannot connect to server.
-
-		//1045: Invalid user name and/or password.
-
-		switch (ex.Number)
+		//on the error code.
+		switch (ex.Code)
 		{
-
-			case 0:
-				{
-					MessageBox.Show("Cannot connect to server.  Contact administrator");
-
-					break;
-				}
-
-			
-			case 1045:
+			case "28P01": // Invalid password
 				{
 					MessageBox.Show("Invalid username/password, please try again");
-
+					break;
+				}
+			default:
+				{
+					MessageBox.Show("Cannot connect to server. Contact administrator");
 					break;
 				}
 		}
 		return false;
-
 	}
-
 }
 
-
 //Close connection
-
 private bool CloseConnection()
 {
 	try
@@ -102,15 +68,11 @@ private bool CloseConnection()
 		connection.Close();
 
 		return true;
-
 	}
-
-	catch (MySqlException ex)
+	catch (NpgsqlException ex)
 	{
-
 		MessageBox.Show(ex.Message);
-
+		
 		return false;
-
 	}
 }
