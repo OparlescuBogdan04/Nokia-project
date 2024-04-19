@@ -6,15 +6,19 @@ namespace Nokia
     public static class DbCon
     {
         private static NpgsqlConnection connection;
+
         private static  string server;
+        
         private static  string database;
+        
         private static string uid;
+        
         private static string password;
 
         //Initialize values
         private static void Initialize()
         {
-            server = "127.0.0.1";
+            server = "localhost";
 
             database = "Resources";
 
@@ -24,9 +28,11 @@ namespace Nokia
 
             string connectionString;
 
-            connectionString = "Server=" + server + ";Port=5432;" + "Database=" +
-                               database + ";" + "User Id=" + uid + ";" + "Password=" + password + ";";
-
+            //connectionString = "Server=" + server + ";Port=5432;" + "Database=" + database + ";" + "User Id=" + uid + ";" + "Password=" + password + ";";
+            connectionString = $"Server={server};Port=5432;User Id={uid};Password={password};Database={database};";
+               
+            //var connectionString = "Server=localhost;Port=5432;User Id=postgres;Password=passw0rd;Database=testdb
+            
             connection = new NpgsqlConnection(connectionString);
         }
 
@@ -65,7 +71,7 @@ namespace Nokia
 
         public static void InsertUser(string username, string email,string password)
         {
-			string query = "INSERT INTO Resources(Name, UserName, Mail, Team, Admin) VALUES(@Name, @UserName, @Mail, @Team, @Admin)";
+			string query = "INSERT INTO \"LoginTB\" (username, email, team, admin) VALUES (@UserName, @Email, @Team, @Admin)";
 
 			//open connection
 
@@ -75,15 +81,13 @@ namespace Nokia
 
                 NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
 
-				cmd.Parameters.AddWithValue("@Name", username);
+                cmd.Parameters.AddWithValue("@username", username);
 					
-                cmd.Parameters.AddWithValue("@UserName", username);
-					
-                cmd.Parameters.AddWithValue("@Mail", email);
+                cmd.Parameters.AddWithValue("@email", email);
 
-				cmd.Parameters.AddWithValue("@Team", "Default"); 
+				cmd.Parameters.AddWithValue("@team", "Default"); 
 					
-                cmd.Parameters.AddWithValue("@Admin", false);
+                cmd.Parameters.AddWithValue("@admin", false);
 
                 //Execute command
 
@@ -96,7 +100,7 @@ namespace Nokia
             }
             else
             {
-                MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for inserting new user! :(");
+                MessageBox.Show("Connection ERROR: Cannot open LoginTB Table from Resources Database for inserting new user! :(");
 
                 return;
 
