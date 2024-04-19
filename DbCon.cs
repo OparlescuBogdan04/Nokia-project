@@ -72,7 +72,7 @@ namespace Nokia
             {
                 //create command and assign the query and connection from the constructor
 
-                NpgsqlCommand cmd = new NpgsqlCommand(query, connection));
+                NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
 
 				cmd.Parameters.AddWithValue("@Name", username);
 					
