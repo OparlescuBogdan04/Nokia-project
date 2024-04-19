@@ -3,7 +3,6 @@ using System.Windows;
 
 namespace Nokia
 {
-
     public static class DbCon
     {
         private static NpgsqlConnection connection;
@@ -81,18 +80,26 @@ namespace Nokia
 
         public static void InsertUser(string username, string email,string password)
         {
-            //To Do !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! refactor
-            string query = "";// = "INSERT INTO Resources (Name, UserName, Mail, Team, Admin) VALUES('" + Login.name + "', '" + Login.user
-               // + "', '" + Login.mail + "', '" + Login.team + "', '" + Login.admin + "');";
+			string query = "INSERT INTO Resources(Name, UserName, Mail, Team, Admin) VALUES(@Name, @UserName, @Mail, @Team, @Admin)";
 
-            //open connection
+			//open connection
 
-            if (OpenConnection() == true)
+			if (OpenConnection() == true)
             {
-
                 //create command and assign the query and connection from the constructor
 
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, connection))
+                {
+					cmd.Parameters.AddWithValue("@Name", username);
+					
+                    cmd.Parameters.AddWithValue("@UserName", username);
+					
+                    cmd.Parameters.AddWithValue("@Mail", email);
+
+					cmd.Parameters.AddWithValue("@Team", "Default"); 
+					
+                    cmd.Parameters.AddWithValue("@Admin", false);
+				}
 
                 //Execute command
 
@@ -113,84 +120,55 @@ namespace Nokia
 
         }
 
-        public static void SelectResources()
-        {
-            string query = "SELECT UserName, Admin FROM Resources;";
+		public static void SelectResources()
+		{
+			string query = "SELECT UserName, Admin FROM Resources;";
 
-            count = 0;
+			count = 0;
 
-            //Open connection
+			//Open connection
+			if (OpenConnection() == true)
+			{
+				//Create Command
+				using (NpgsqlCommand cmd = new NpgsqlCommand(query, connection))
+				{
+					//Create a data reader and Execute the command
+					using (NpgsqlDataReader dataReader = cmd.ExecuteReader())
+					{
+						while (dataReader.Read())
+						{
+							string usr = dataReader.GetString(0); 
+							string adm = dataReader.GetString(1);
 
-            if (OpenConnection() == true)
-            {
-                //Create Command
+							if (usr == Main.usern)
+							{
+								count = 1;
 
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+								if (adm.Contains("A"))
+								{
+									count = 2;
+									break;
+								}
 
-                //Create a data reader and Execute the command
+								if (adm.Contains("O"))
+								{
+									count = 3;
+									break;
+								}
 
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                //Read the data and store them in the list
-
-                while (dataReader.Read())
-                {
-
-                    string usr = dataReader[0].ToString();
-
-                    string adm = dataReader[1].ToString();
-
-
-                    if (usr == Main.usern)
-                    {
-
-                        count = 1;
-
-
-                        if (adm.Contains("A")
-
-                        {
-
-                            count = 2;
-
-                            break;
-
-                        }
-
-
-
-                        if (adm.Contains("O"))
-                        {
-
-                            count = 3;
-
-                            break;
-
-                        }
-
-                        break;
-
-                    }
-
-                }
-
-                //close Data Reader
-
-                dataReader.Close();
-
-
-                //close Connection
-
-                CloseConnection();
-
-                //return list to be displayed
-            }
-            else
-            {
-                MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
-
-                return;
-            }
-        }
-    }
+								break;
+							}
+						}
+					}
+				}
+				//Close Connection
+				CloseConnection();
+			}
+			else
+			{
+				MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
+				return;
+			}
+		}
+	}
 }
