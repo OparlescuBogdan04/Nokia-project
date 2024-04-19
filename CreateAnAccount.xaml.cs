@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,13 +55,16 @@ namespace Nokia
         {
             InvalidEmailCheck();
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string username = _Username.Text;
-            string email=_Email.Text;
+            string email= _Email.Text;
             string password = _Password.Text;
             //create a new account using the credentials
             //To Do
+
+            
             this.SwitchTo(new MainWindow());
         }
     }

@@ -19,15 +19,19 @@ namespace Nokia
         {
             window.Show();
         }
+
         public static void SwitchTo(this Window current,Window new_window)
         {
             double left = current.Left;
+
             double top = current.Top;
 
             new_window.Show();
+            
             current.Hide();
 
             new_window.Left = left;
+            
             new_window.Top = top;
         }
     }
