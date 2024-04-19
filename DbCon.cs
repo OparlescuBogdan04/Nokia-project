@@ -1,196 +1,196 @@
 using Npgsql; // Add this namespace for PostgreSQL
+using System.Windows;
 
 namespace Nokia
 {
-	private NpgsqlConnection connection;
-	private string server;
-	private string database;
-	private string uid;
-	private string password;
 
-	public partial static class DbCon
-	{
-		public DbCon()
-		{
-			Initialize();
-		}
+    public static class DbCon
+    {
+        private static NpgsqlConnection connection;
+        private static  string server;
+        private static  string database;
+        private static string uid;
+        private static string password;
 
-		//Initialize values
-		private void Initialize()
-		{
-			server = "127.0.0.1";
+        //Initialize values
+        private static void Initialize()
+        {
+            server = "127.0.0.1";
 
-			database = "Resources";
+            database = "Resources";
 
-			uid = "postgres";
+            uid = "postgres";
 
-			password = "4825";
+            password = "4825";
 
-			string connectionString;
+            string connectionString;
 
-			connectionString = "Server=" + server + ";Port=5432;" + "Database=" +
-							   database + ";" + "User Id=" + uid + ";" + "Password=" + password + ";";
+            connectionString = "Server=" + server + ";Port=5432;" + "Database=" +
+                               database + ";" + "User Id=" + uid + ";" + "Password=" + password + ";";
 
-			connection = new NpgsqlConnection(connectionString);
-		}
+            connection = new NpgsqlConnection(connectionString);
+        }
 
-		//open connection to database
-		private bool OpenConnection()
-		{
-			try
-			{
-				connection.Open();
+        //open connection to database
+        private static bool OpenConnection()
+        {
+            try
+            {
+                connection.Open();
 
-				return true;
-			}
-			catch (NpgsqlException ex)
-			{
-				//When handling errors, you can your application's response based
-				//on the error code.
-				switch (ex.Code)
-				{
-					case "28P01": // Invalid password
-						{
-							MessageBox.Show("Invalid username/password, please try again");
-							break;
-						}
-					default:
-						{
-							MessageBox.Show("Cannot connect to server. Contact administrator");
-							break;
-						}
-				}
-				return false;
-			}
-		}
+                return true;
+            }
+            catch (NpgsqlException ex)
+            {
+                //To refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                ////When handling errors, you can your application's response based
+                ////on the error code.
+                //switch (ex.Code)
+                //{
+                //    case "28P01": // Invalid password
+                //        {
+                //            MessageBox.Show("Invalid username/password, please try again");
+                //            break;
+                //        }
+                //    default:
+                //        {
+                //            MessageBox.Show("Cannot connect to server. Contact administrator");
+                //            break;
+                //        }
+                //}
+                return false;
+            }
+        }
 
-		//Close connection
-		private bool CloseConnection()
-		{
-			try
-			{
-				connection.Close();
+        //Close connection
+        private static bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();
 
-				return true;
-			}
-			catch (NpgsqlException ex)
-			{
-				MessageBox.Show(ex.Message);
+                return true;
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message);
 
-				return false;
-			}
-		}
+                return false;
+            }
+        }
 
-		public void InsertUser()
-		{
-			string query = "INSERT INTO Resources (Name, UserName, Mail, Team, Admin) VALUES('" + Login.name + "', '" + Login.user
-				+ "', '" + Login.mail + "', '" + Login.team + "', '" + Login.admin + "');";
+        public static void InsertUser(string username, string email,string password)
+        {
+            //To Do !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! refactor
+            string query = "";// = "INSERT INTO Resources (Name, UserName, Mail, Team, Admin) VALUES('" + Login.name + "', '" + Login.user
+               // + "', '" + Login.mail + "', '" + Login.team + "', '" + Login.admin + "');";
 
-			//open connection
+            //open connection
 
-			if (this.OpenConnection() == true)
-			{
+            if (OpenConnection() == true)
+            {
 
-				//create command and assign the query and connection from the constructor
+                //create command and assign the query and connection from the constructor
 
-				MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
 
-				//Execute command
+                //Execute command
 
-				cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-				//close connection
+                //close connection
 
-				this.CloseConnection();
+                CloseConnection();
 
-			}
-			else
-			{
-				MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for inserting new user! :(");
+            }
+            else
+            {
+                MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for inserting new user! :(");
 
-				return;
+                return;
 
-			}
+            }
 
-		}
+        }
 
-		public void SelectResources()
-		{
-			string query = "SELECT UserName, Admin FROM Resources;";
+        public static void SelectResources()
+        {
+            string query = "SELECT UserName, Admin FROM Resources;";
 
-			count = 0;
+            count = 0;
 
-			//Open connection
+            //Open connection
 
-			if (this.OpenConnection() == true)
-			{
-				//Create Command
+            if (OpenConnection() == true)
+            {
+                //Create Command
 
-				MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
 
-				//Create a data reader and Execute the command
+                //Create a data reader and Execute the command
 
-				MySqlDataReader dataReader = cmd.ExecuteReader();
+                MySqlDataReader dataReader = cmd.ExecuteReader();
 
-				//Read the data and store them in the list
+                //Read the data and store them in the list
 
-				while (dataReader.Read())
-				{
+                while (dataReader.Read())
+                {
 
-					string usr = dataReader[0].ToString();
+                    string usr = dataReader[0].ToString();
 
-					string adm = dataReader[1].ToString();
+                    string adm = dataReader[1].ToString();
 
 
-					if (usr == Main.usern)
-					{
+                    if (usr == Main.usern)
+                    {
 
-						count = 1;
-
-
-						if (adm.Contains("A")
-						{
-
-							count = 2;
-
-							break;
-
-						}
+                        count = 1;
 
 
+                        if (adm.Contains("A")
 
-						if (adm.Contains("O"))
-						{
+                        {
 
-							count = 3;
+                            count = 2;
 
-							break;
+                            break;
 
-						}
-
-						break;
-
-					}
-
-				}
-
-				//close Data Reader
-
-				dataReader.Close();
+                        }
 
 
-				//close Connection
 
-				this.CloseConnection();
+                        if (adm.Contains("O"))
+                        {
 
-				//return list to be displayed
-			}
-			else
-			{
-				MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
+                            count = 3;
 
-				return;
-			}
-		}
-	}
+                            break;
+
+                        }
+
+                        break;
+
+                    }
+
+                }
+
+                //close Data Reader
+
+                dataReader.Close();
+
+
+                //close Connection
+
+                CloseConnection();
+
+                //return list to be displayed
+            }
+            else
+            {
+                MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
+
+                return;
+            }
+        }
+    }
 }
