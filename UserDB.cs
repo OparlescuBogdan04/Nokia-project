@@ -15,9 +15,9 @@ namespace Nokia
 
         public static bool ExistsInDB(string username)
         {
-            string querry = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}')";
+            string query = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}')";
 
-			return DbCon.NonNullQuerry(querry);
+			return DbCon.SafeNonNullQuery(query,2);
 
         }
 
@@ -34,9 +34,9 @@ namespace Nokia
 
         public static bool DatabaseVerified(string username,string password)
         {
-            string querry = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}' AND password = '{password}')";
+            string query = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}' AND password = '{password}')";
 
-            return DbCon.NonNullQuerry(querry);
+            return DbCon.SafeNonNullQuery(query,4);
         }
     }
 }

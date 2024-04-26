@@ -22,12 +22,12 @@
 
         <!--Password-->
         <TextBlock HorizontalAlignment="Center" Margin="0,249,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="_Password" HorizontalAlignment="Center" Margin="0,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
+        <PasswordBox x:Name="_Password" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
 
 
         <!--Confirm Password-->
         <TextBlock HorizontalAlignment="Center" Margin="0,304,0,0" TextWrapping="Wrap" Text="Confirm Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
-        <TextBox x:Name="_ConfirmPsw" HorizontalAlignment="Center" Margin="0,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
+        <PasswordBox x:Name="_ConfirmPsw" HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
 
 
         <!--Create a new account-->

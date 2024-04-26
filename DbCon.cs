@@ -1,4 +1,6 @@
 using Npgsql; // Add this namespace for PostgreSQL
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Windows;
 
 namespace Nokia
@@ -46,7 +48,7 @@ namespace Nokia
 
                 return true;
             }
-            catch (NpgsqlException ex)
+            catch
             {
                 return false;
             }
@@ -76,10 +78,10 @@ namespace Nokia
 
 			string query = $"INSERT INTO \"LoginTB\" (username, email, team, admin, password) VALUES ('{username}', '{email}', '{Team}', '{Admin}', '{password}')";
 
-			QuerryCommandGeneral(query);
+			QueryCommandGeneral(query);
         }
 
-        public static bool NonNullQuerry(string query)
+        public static bool NonNullQuery(string query)
         {
 			if (OpenConnection() == true)
 			{
@@ -101,11 +103,25 @@ namespace Nokia
 			}
 		}
 
-		public static void QuerryCommandGeneral(string querry)
+        public static bool SafeNonNullQuery(string query,int quotes_count)
+        {
+			//counts the number of ' chars
+			if (query.Count(c => c == '\'') != quotes_count)
+				return false;
+
+			if (OpenConnection() == false)
+				return false;
+            NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+            bool existsUser = (bool)cmd.ExecuteScalar();
+            CloseConnection();
+            return existsUser;
+        }
+
+        public static void QueryCommandGeneral(string query)
 		{	
 			if (OpenConnection() == true)
 			{
-				NpgsqlCommand cmd = new NpgsqlCommand(querry, connection);
+				NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
 
 				//Execute command
 

@@ -39,7 +39,7 @@ namespace Nokia
 
         private bool CheckPasswords()
         {
-            return (_Password == _ConfirmPsw)&&(_Password.Text.Length>UserLogin.min_password_length);
+            return (_Password == _ConfirmPsw)&&(_Password.Password.Length>UserLogin.min_password_length);
         }
 
         #endregion
@@ -60,7 +60,7 @@ namespace Nokia
         {
             string username = _Username.Text;
             string email= _Email.Text;
-            string password = _Password.Text;
+            string password = _Password.Password;
 
             if(UserDB.ExistsInDB(username))
             {
@@ -70,7 +70,7 @@ namespace Nokia
                 return;
             }
 
-            DbCon.InsertUser(username, email, password);
+            DbCon.InsertUser(username, email, password.Encrypt());
             
             this.SwitchTo(new MainWindow());
         }
