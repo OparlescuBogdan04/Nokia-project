@@ -1,4 +1,6 @@
-﻿namespace Nokia
+﻿using System.Windows;
+
+namespace Nokia
 {
 
     public static class UserDB
@@ -13,8 +15,14 @@
 
         public static bool ExistsInDB(string username)
         {
-            
-            return DbCon.checkExistingUser(username);
+            //return DbCon.checkExistingUser(username);
+
+            string querry = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}')";
+
+            MessageBox.Show(querry);
+
+			return DbCon.NonNullQuerry(querry);
+
         }
 
         public static bool ExistsInDB(int user_id)

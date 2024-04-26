@@ -69,61 +69,23 @@ namespace Nokia
             }
         }
 
-        public static void InsertUser(string username, string email,string password)
+        public static void InsertUser(string username, string email, string password)
         {
-			string query = "INSERT INTO \"LoginTB\" (username, email, team, admin) VALUES (@UserName, @Email, @Team, @Admin)";
+			string Team = "default";
+			string Admin = "false";
 
-			//open connection
+			string query = $"INSERT INTO \"LoginTB\" (username, email, team, admin, password) VALUES ('{username}', '{email}', '{Team}', '{Admin}', '{password}')";
 
-			if (OpenConnection() == true)
-            {
-                //create command and assign the query and connection from the constructor
+			MessageBox.Show(query);
 
-                NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
-
-                cmd.Parameters.AddWithValue("@username", username);
-					
-                cmd.Parameters.AddWithValue("@email", email);
-
-				cmd.Parameters.AddWithValue("@team", "Default"); 
-					
-                cmd.Parameters.AddWithValue("@admin", false);
-
-                //Execute command
-
-                if (!checkExistingUser(username))
-                {
-                    cmd.ExecuteNonQuery();
-                }
-
-                //close connection
-
-                CloseConnection();
-
-            }
-            else
-            {
-                MessageBox.Show("Connection ERROR: Cannot open LoginTB Table from Resources Database for inserting new user! :(");
-
-                return;
-
-            }
-
+			QuerryCommandGeneral(query);
         }
 
-		public static bool checkExistingUser(string username)
-		{
-			string query = "SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  @UserName);";
-
-			//open connection
-
+        public static bool NonNullQuerry(string query)
+        {
 			if (OpenConnection() == true)
 			{
-				//create command and assign the query and connection from the constructor
-
 				NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
-
-				cmd.Parameters.AddWithValue("@username", username);
 
 				//Execute command
 
@@ -133,18 +95,64 @@ namespace Nokia
 
 				CloseConnection();
 
-                return existsUser;
-
+				return existsUser;
 			}
 			else
 			{
-				MessageBox.Show("Connection ERROR: Cannot open LoginTB Table from Resources Database to check this user! :(");
-
 				return false;
-
 			}
-
 		}
+
+		public static void QuerryCommandGeneral(string querry)
+		{	
+			if (OpenConnection() == true)
+			{
+				NpgsqlCommand cmd = new NpgsqlCommand(querry, connection);
+
+				//Execute command
+
+				cmd.ExecuteNonQuery();
+
+				//close connection
+
+				CloseConnection();
+			}
+		}
+
+		//public static bool checkExistingUser(string username)
+		//{
+		//	string query = "SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  @UserName);";
+
+		//	//open connection
+
+		//	if (OpenConnection() == true)
+		//	{
+		//		//create command and assign the query and connection from the constructor
+
+		//		NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+
+		//		cmd.Parameters.AddWithValue("@username", username);
+
+		//		//Execute command
+
+		//		bool existsUser = (bool)cmd.ExecuteScalar();
+
+		//		//close connection
+
+		//		CloseConnection();
+
+  //              return existsUser;
+
+		//	}
+		//	else
+		//	{
+		//		MessageBox.Show("Connection ERROR: Cannot open LoginTB Table from Resources Database to check this user! :(");
+
+		//		return false;
+
+		//	}
+
+		//}
 
 		//public static void SelectResources()
 		//{
