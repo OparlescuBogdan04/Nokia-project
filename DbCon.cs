@@ -91,7 +91,10 @@ namespace Nokia
 
                 //Execute command
 
-                cmd.ExecuteNonQuery();
+                if (!checkExistingUser(username))
+                {
+                    cmd.ExecuteNonQuery();
+                }
 
                 //close connection
 
@@ -108,7 +111,7 @@ namespace Nokia
 
         }
 
-		public static void checkExistingUser(string username)
+		public static bool checkExistingUser(string username)
 		{
 			string query = "SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  @UserName);";
 
@@ -126,26 +129,18 @@ namespace Nokia
 
 				bool existsUser = (bool)cmd.ExecuteScalar();
 
-
-                if (existsUser == true) 
-                {
-                    //to do 
-                }
-                else
-                {
-                    //to do
-                }
-
 				//close connection
 
 				CloseConnection();
+
+                return existsUser;
 
 			}
 			else
 			{
 				MessageBox.Show("Connection ERROR: Cannot open LoginTB Table from Resources Database to check this user! :(");
 
-				return;
+				return false;
 
 			}
 

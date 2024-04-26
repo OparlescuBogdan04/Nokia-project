@@ -13,8 +13,8 @@
 
         public static bool ExistsInDB(string username)
         {
-            //To Do
-            return false;
+            
+            return DbCon.checkExistingUser(username);
         }
 
         public static bool ExistsInDB(int user_id)
