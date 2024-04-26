@@ -108,56 +108,99 @@ namespace Nokia
 
         }
 
+		public static void checkExistingUser(string username)
+		{
+			string query = "SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  @UserName);";
+
+			//open connection
+
+			if (OpenConnection() == true)
+			{
+				//create command and assign the query and connection from the constructor
+
+				NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+
+				cmd.Parameters.AddWithValue("@username", username);
+
+				//Execute command
+
+				bool existsUser = (bool)cmd.ExecuteScalar();
+
+
+                if (existsUser == true) 
+                {
+                    //to do 
+                }
+                else
+                {
+                    //to do
+                }
+
+				//close connection
+
+				CloseConnection();
+
+			}
+			else
+			{
+				MessageBox.Show("Connection ERROR: Cannot open LoginTB Table from Resources Database to check this user! :(");
+
+				return;
+
+			}
+
+		}
+
 		//public static void SelectResources()
 		//{
 		//	string query = "SELECT UserName, Admin FROM Resources;";
 
 		//	int count = 0;
 
-  //          //Open connection
-  //          if (OpenConnection() == true)
-  //          {
-  //              //Create Command
-  //              NpgsqlCommand cmd = new NpgsqlCommand(query, connection));
+		//          //Open connection
+		//          if (OpenConnection() == true)
+		//          {
+		//              //Create Command
+		//              NpgsqlCommand cmd = new NpgsqlCommand(query, connection));
 
-  //              //Create a data reader and Execute the command
-  //              NpgsqlDataReader dataReader = cmd.ExecuteReader()) ;
+		//              //Create a data reader and Execute the command
+		//              NpgsqlDataReader dataReader = cmd.ExecuteReader()) ;
 
-  //              while (dataReader.Read())
-  //              {
-  //                  string usr = dataReader.GetString(0);
+		//              while (dataReader.Read())
+		//              {
+		//                  string usr = dataReader.GetString(0);
 
-  //                  string adm = dataReader.GetString(1);
+		//                  string adm = dataReader.GetString(1);
 
-  //                  if (usr == Main.usern)
-  //                  {
-  //                      count = 1;
+		//                  if (usr == Main.usern)
+		//                  {
+		//                      count = 1;
 
-  //                      if (adm.Contains("A"))
-  //                      {
-  //                          count = 2;
+		//                      if (adm.Contains("A"))
+		//                      {
+		//                          count = 2;
 
-  //                          break;
-  //                      }
+		//                          break;
+		//                      }
 
-  //                      if (adm.Contains("O"))
-  //                      {
-  //                          count = 3;
-                            
-  //                          break;
-  //                      }
+		//                      if (adm.Contains("O"))
+		//                      {
+		//                          count = 3;
 
-  //                      break;
-  //                  }
-  //              }
-  //              //Close Connection
-  //              CloseConnection();
-  //          }
-  //          else
-  //          {
-  //              MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
-  //              return;
-  //          }
+		//                          break;
+		//                      }
+
+		//                      break;
+		//                  }
+		//              }
+		//              //Close Connection
+		//              CloseConnection();
+		//          }
+		//          else
+		//          {
+		//              MessageBox.Show("Connection ERROR: Cannot open RESOURCES Table from db_CBON Database for selecting users! :(");
+		//              return;
+		//          }
 		//}
 	}
 }
