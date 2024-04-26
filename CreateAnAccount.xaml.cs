@@ -61,8 +61,15 @@ namespace Nokia
             string username = _Username.Text;
             string email= _Email.Text;
             string password = _Password.Text;
-            //create a new account using the credentials
-            //To Do
+
+            if(UserDB.ExistsInDB(username))
+            {
+                string message = "User already exists in our Database Resources!";
+                MessageBox.Show(message);
+                _ErrorMsg.Text = message;
+                return;
+            }
+
             DbCon.InsertUser(username, email, password);
             
             this.SwitchTo(new MainWindow());

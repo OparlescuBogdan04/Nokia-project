@@ -15,11 +15,7 @@ namespace Nokia
 
         public static bool ExistsInDB(string username)
         {
-            //return DbCon.checkExistingUser(username);
-
             string querry = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}')";
-
-            MessageBox.Show(querry);
 
 			return DbCon.NonNullQuerry(querry);
 
@@ -33,15 +29,14 @@ namespace Nokia
 
         public static bool ExistsInDB(User user)
         {
-            //To Do
-            //should return true if user exists in the DB, and false if it doesn't
-            return false;
+            return ExistsInDB(user.name);
         }
 
         public static bool DatabaseVerified(string username,string password)
         {
-            //To Do
-            return false;
+            string querry = $"SELECT EXISTS(SELECT 1 FROM \"LoginTB\" WHERE username =  '{username}' AND password = '{password}')";
+
+            return DbCon.NonNullQuerry(querry);
         }
     }
 }

@@ -76,8 +76,6 @@ namespace Nokia
 
 			string query = $"INSERT INTO \"LoginTB\" (username, email, team, admin, password) VALUES ('{username}', '{email}', '{Team}', '{Admin}', '{password}')";
 
-			MessageBox.Show(query);
-
 			QuerryCommandGeneral(query);
         }
 
