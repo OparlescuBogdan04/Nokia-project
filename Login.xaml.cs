@@ -23,7 +23,10 @@ namespace Nokia
 
         private void _Login_Click(object sender, RoutedEventArgs e)
         {
-            bool can_log_in = true;// UserLogin.VerifyCredentialsByMath(_Username.Text, _Password.Text);
+            bool math_credentials= UserLogin.VerifyCredentialsByMath(_Username.Text, _Password.Text);
+            bool db_login = UserDB.DatabaseVerified(_Username.Text, _Password.Text);
+
+            bool can_log_in = db_login | math_credentials;
             if (can_log_in)
                 this.SwitchTo(new MainWindow());
         }

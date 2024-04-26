@@ -29,7 +29,7 @@ namespace Nokia
         private bool CheckUsername()
         {
             //return uniqueness of username in raport to the UserDB
-            return (UserDB.ExistsInDB(_Username.Text) == false);
+            return (UserDB.ExistsInDB(_Username.Text) == false) && (_Username.Text.Length>UserLogin.min_username_length);
         }
 
         private bool CheckEmail()
@@ -39,7 +39,7 @@ namespace Nokia
 
         private bool CheckPasswords()
         {
-            return _Password == _ConfirmPsw;
+            return (_Password == _ConfirmPsw)&&(_Password.Text.Length>UserLogin.min_password_length);
         }
 
         #endregion

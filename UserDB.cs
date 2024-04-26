@@ -29,5 +29,11 @@
             //should return true if user exists in the DB, and false if it doesn't
             return false;
         }
+
+        public static bool DatabaseVerified(string username,string password)
+        {
+            //To Do
+            return false;
+        }
     }
 }

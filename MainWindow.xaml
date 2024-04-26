@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nokia"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Blue">
-    <Grid>
+        Title="Application" Height="450" Width="800" Background="Blue">
+    <Grid Background="{StaticResource BackgroundGradient}">
         
     </Grid>
 </Window>

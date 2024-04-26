@@ -6,6 +6,8 @@ namespace Nokia
 {
     public static class UserLogin
     {
+        public const int min_username_length= 2;
+        public const int min_password_length = 4;
 
         public static void LogMessage(TextBlock block,string message)
         {
