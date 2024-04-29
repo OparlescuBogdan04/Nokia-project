@@ -47,9 +47,13 @@ namespace Nokia
         private void InvalidEmailCheck()
         {
             if (CheckEmail() == false)
+            {
                 _ErrorMsg.Text = "Invalid email address!";
+            }
             else
-                _ErrorMsg.Text="";
+            {
+                _ErrorMsg.Text = "";
+            }
         }
         private void _Email_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -59,14 +63,19 @@ namespace Nokia
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string username = _Username.Text;
+
             string email= _Email.Text;
+            
             string password = _Password.Password;
 
             if(UserDB.ExistsInDB(username))
             {
                 string message = "User already exists in our Database Resources!";
+            
                 MessageBox.Show(message);
+                
                 _ErrorMsg.Text = message;
+                
                 return;
             }
 

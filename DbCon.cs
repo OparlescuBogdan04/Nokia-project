@@ -74,6 +74,7 @@ namespace Nokia
         public static void InsertUser(string username, string email, string password)
         {
 			string Team = "default";
+
 			string Admin = "false";
 
 			string query = $"INSERT INTO \"LoginTB\" (username, email, team, admin, password) VALUES ('{username}', '{email}', '{Team}', '{Admin}', '{password}')";
@@ -110,11 +111,16 @@ namespace Nokia
 				return false;
 
 			if (OpenConnection() == false)
+			{
 				return false;
+			}
             NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
-            bool existsUser = (bool)cmd.ExecuteScalar();
-            CloseConnection();
-            return existsUser;
+            
+			bool existsUser = (bool)cmd.ExecuteScalar();
+            
+			CloseConnection();
+            
+			return existsUser;
         }
 
         public static void QueryCommandGeneral(string query)
