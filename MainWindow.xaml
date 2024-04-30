@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Application" Height="450" Width="800" Background="Blue">
     <Grid Background="{StaticResource BackgroundGradient}">
-        
+        <TextBlock HorizontalAlignment="Center" Margin="0,126,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,152,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

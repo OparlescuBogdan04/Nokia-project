@@ -30,6 +30,22 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
+        <!--White TetxBlock Style-->
+        <Style x:Key="White_Textblock" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+        </Style>
+
+        <!--Error Message Textblock-->
+        <Style x:Key="Error_TextBlock" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Foreground" Value="Red"/>
+        </Style>
+
     </Application.Resources>
 </Application>

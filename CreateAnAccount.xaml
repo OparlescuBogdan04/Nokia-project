@@ -10,23 +10,23 @@
         <Image HorizontalAlignment="Center" Height="84" Margin="0,25,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
 
         <!--Error message block-->
-        <TextBlock x:Name="_ErrorMsg" HorizontalAlignment="Center" Margin="0,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="Red"/>
+        <TextBlock x:Name="_ErrorMsg" Style="{StaticResource Error_TextBlock}"  Margin="0,118,0,0" Text=""/>
 
         <!--Username-->
-        <TextBlock HorizontalAlignment="Center" Margin="0,139,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBlock Style="{StaticResource White_Textblock}" Margin="0,139,0,0" Text="Username:"/>
         <TextBox x:Name="_Username" HorizontalAlignment="Center" Margin="0,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
         <!--Email-->
-        <TextBlock HorizontalAlignment="Center" Margin="0,197,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBlock Style="{StaticResource White_Textblock}" Margin="0,197,0,0" Text="Email:"/>
         <TextBox x:Name="_Email" HorizontalAlignment="Center" Margin="0,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
 
         <!--Password-->
-        <TextBlock HorizontalAlignment="Center" Margin="0,249,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBlock Style="{StaticResource White_Textblock}" Margin="0,249,0,0" Text="Password:"/>
         <PasswordBox x:Name="_Password" HorizontalAlignment="Center" Margin="0,266,0,0" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
 
 
         <!--Confirm Password-->
-        <TextBlock HorizontalAlignment="Center" Margin="0,304,0,0" TextWrapping="Wrap" Text="Confirm Password:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBlock Style="{StaticResource White_Textblock}" Margin="0,304,0,0" Text="Confirm Password:"/>
         <PasswordBox x:Name="_ConfirmPsw" HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top" Width="120" LostFocus="_Email_LostFocus"/>
 
 

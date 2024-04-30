@@ -10,12 +10,12 @@
         <Image HorizontalAlignment="Center" Height="84" Margin="0,50,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
 
         <!--Error msg-->
-        <TextBlock x:Name="_ErrorMsg" HorizontalAlignment="Center" Margin="0,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Foreground="Red"/>
+        <TextBlock x:Name="_ErrorMsg" Style="{StaticResource Error_TextBlock}" Margin="0,180,0,0" Text=""/>
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,202,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Foreground="WhiteSmoke"/>
+        <TextBlock Style="{StaticResource White_Textblock}" Margin="0,202,0,0" Text="Username:"/>
         <TextBox x:Name="_Username" HorizontalAlignment="Center" Margin="0,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,244,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Foreground="WhiteSmoke" MouseEnter="_ShowPassword" MouseLeave="_HidePassword"/>
+        <TextBlock Style="{StaticResource White_Textblock}" Margin="0,244,0,0" Text="Password:" MouseEnter="_ShowPassword" MouseLeave="_HidePassword"/>
         <PasswordBox x:Name="_Password" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" Width="180"/>
 
         <Button x:Name="_Login" Content="Login" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Click="_Login_Click" Height="20" Width="80"/>
