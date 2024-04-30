@@ -180,3 +180,5 @@ C:\Users\rares\GitHub\Nokia-project\bin\Debug\System.Threading.Channels.xml
 C:\Users\rares\GitHub\Nokia-project\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\rares\GitHub\Nokia-project\bin\Debug\System.ValueTuple.xml
 C:\Users\rares\GitHub\Nokia-project\obj\Debug\Nokia.csproj.Up2Date
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Monitoring.g.cs
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Monitoring.baml

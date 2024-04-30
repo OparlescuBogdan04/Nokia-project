@@ -20,6 +20,7 @@ namespace Nokia
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string relative_path = "ApplicationPages/";
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace Nokia
 
         private void _Monitoring_Click(object sender, RoutedEventArgs e)
         {
-
+            Main.Navigate(new Uri(relative_path+ "Monitoring.xaml", UriKind.Relative));
         }
     }
 }
