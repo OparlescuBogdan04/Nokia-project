@@ -1,5 +1,7 @@
 ﻿using Npgsql;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Windows;
 
 namespace Nokia
 {
@@ -34,6 +36,7 @@ namespace Nokia
 
         //counts the number of ' characters in a query to prevent injection
         public delegate bool BoolF();
+
         public static bool SafeNonNullQuery(string query, int quotes_count, NpgsqlConnection connection,BoolF OpenConnection,BoolF CloseConnection)
         {
             //counts the number of ' chars
@@ -44,8 +47,13 @@ namespace Nokia
                 return false;
 
             NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+            
+            MessageBox.Show(query);
+
             bool existsUser = (bool)cmd.ExecuteScalar();
+
             CloseConnection();
+  
             return existsUser;
         }
     }
