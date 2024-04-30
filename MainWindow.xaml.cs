@@ -24,5 +24,10 @@ namespace Nokia
         {
             InitializeComponent();
         }
+
+        private void _Monitoring_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

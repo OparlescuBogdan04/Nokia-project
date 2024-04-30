@@ -7,8 +7,22 @@
         mc:Ignorable="d"
         Title="Application" Height="450" Width="800" Background="Blue">
     <Grid Background="{StaticResource BackgroundGradient}">
-        <TextBlock HorizontalAlignment="Center" Margin="0,126,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,152,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+        <!--Information Region-->
+        <Grid Margin="-228,9,228,-9">
+            <TextBlock Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,140,0,0" Text="Stability Leader: "/>
+            <TextBlock Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,160,0,0" Text="Engineer Name: "/>
+            <TextBlock Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,180,0,0" Text="Stability Manager: "/>
+            <TextBlock Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,200,0,0" Text="Team Name: "/>
+            <TextBlock Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,220,0,0" Text="Stability Guardians: "/>
+        </Grid>
+
+        <Button x:Name="_Monitoring" Content="Monitoring" HorizontalAlignment="Center" Margin="400,80,0,0" VerticalAlignment="Top" Width="124" Click="_Monitoring_Click"/>
+        <Button x:Name="_Backlog" Content="Backlog" HorizontalAlignment="Center" Margin="400,120,0,0" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="_Defects" Content="Defects" HorizontalAlignment="Center" Margin="400,140,0,0" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="_Reverts" Content="Reverts" HorizontalAlignment="Center" Margin="400,160,0,0" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="_Statistics" Content="Statistics" HorizontalAlignment="Center" Margin="400,180,0,0" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="_TeamManagement" Content="Team Management" HorizontalAlignment="Center" Margin="400,220,0,0" VerticalAlignment="Top" Width="124"/>
 
     </Grid>
 </Window>
