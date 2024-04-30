@@ -106,21 +106,7 @@ namespace Nokia
 
         public static bool SafeNonNullQuery(string query,int quotes_count)
         {
-			//counts the number of ' chars
-			if (query.Count(c => c == '\'') != quotes_count)
-				return false;
-
-			if (OpenConnection() == false)
-			{
-				return false;
-			}
-            NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
-            
-			bool existsUser = (bool)cmd.ExecuteScalar();
-            
-			CloseConnection();
-            
-			return existsUser;
+			return Security.SafeNonNullQuery(query, quotes_count, connection, OpenConnection, CloseConnection);
         }
 
         public static void QueryCommandGeneral(string query)

@@ -3,11 +3,8 @@
     public class User
     {
         public string name;
-
         public int id { get; }
-
-        public enum UserType { Normal,Admin,Programmer};
-        
+        public enum UserType { Normal,Admin,Programmer};  
         public UserType user_type { get; }
 
         public User(string name)
