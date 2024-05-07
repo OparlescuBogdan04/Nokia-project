@@ -30,5 +30,10 @@ namespace Nokia
         {
             this.SwitchTo(new Monitoring());
         }
+
+        private void _Backlog_Click(object sender, RoutedEventArgs e)
+        {
+            this.SwitchTo(new BacklogModule());
+        }
     }
 }

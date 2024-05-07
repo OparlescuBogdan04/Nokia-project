@@ -23,5 +23,10 @@ namespace Nokia.ApplicationPages
         {
             InitializeComponent();
         }
+
+        private void _EditEntry_Click(object sender, RoutedEventArgs e)
+        {
+            WindowDialogue.CreateNewInstance(new EditEntry());
+        }
     }
 }
