@@ -6,7 +6,15 @@
         mc:Ignorable="d"
         Title="Backlog Module" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
-        
-
+        <DataGrid AutoGenerateColumns="False"  Margin="0,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="230" Width="696">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Owner" Width="*"/>
+                <DataGridTextColumn Header="Status" Width="*"/>
+                <DataGridTextColumn Header="Jira" Width="*"/>
+                <DataGridTextColumn Header="Defect" Width="*"/>
+                <DataGridTextColumn Header="Prio" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="_Analyze" Content="Analyze" FontSize="16" HorizontalAlignment="Center" Margin="0,364,0,0" VerticalAlignment="Top" Height="30" Width="200"/>
     </Grid>
 </Window>
