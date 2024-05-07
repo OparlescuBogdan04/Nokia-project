@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nokia.ApplicationPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,6 @@ namespace Nokia
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string relative_path = "ApplicationPages/";
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Nokia
 
         private void _Monitoring_Click(object sender, RoutedEventArgs e)
         {
-            Main.Navigate(new Uri(relative_path+ "Monitoring.xaml", UriKind.Relative));
+            this.SwitchTo(new Monitoring());
         }
     }
 }
