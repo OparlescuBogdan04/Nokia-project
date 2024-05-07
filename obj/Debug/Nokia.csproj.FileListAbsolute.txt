@@ -186,3 +186,5 @@ C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\Monitoring.g.cs
 C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\Monitoring.baml
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\EditEntry.baml
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\EditEntry.g.cs
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\BacklogModule.baml
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\BacklogModule.g.cs
