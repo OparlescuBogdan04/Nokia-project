@@ -192,3 +192,11 @@ C:\Users\User\Documents\GitHub\Nokia-project\bin\Debug\Azure.Core.dll
 C:\Users\User\Documents\GitHub\Nokia-project\bin\Debug\System.Memory.Data.dll
 C:\Users\User\Documents\GitHub\Nokia-project\bin\Debug\Azure.Core.xml
 C:\Users\User\Documents\GitHub\Nokia-project\bin\Debug\System.Memory.Data.xml
+C:\Users\rares\GitHub\Nokia-project\bin\Debug\Azure.Core.dll
+C:\Users\rares\GitHub\Nokia-project\bin\Debug\System.Memory.Data.dll
+C:\Users\rares\GitHub\Nokia-project\bin\Debug\Azure.Core.xml
+C:\Users\rares\GitHub\Nokia-project\bin\Debug\System.Memory.Data.xml
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\BacklogModule.baml
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\EditEntry.baml
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\BacklogModule.g.cs
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\EditEntry.g.cs

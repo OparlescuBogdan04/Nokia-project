@@ -1,5 +1,6 @@
 using Npgsql; // Add this namespace for PostgreSQL
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Windows;
 
@@ -40,7 +41,7 @@ namespace Nokia
 
         //open connection to database
         private static bool OpenConnection()
-        {
+		{ 
             Initialize();
             try
             {
@@ -104,9 +105,14 @@ namespace Nokia
 			}
 		}
 
+		public static NpgsqlConnection getConnection()
+		{
+			return connection;
+		}
+
         public static bool SafeNonNullQuery(string query,int quotes_count)
         {
-			return Security.SafeNonNullQuery(query, quotes_count, connection, OpenConnection, CloseConnection);
+			return Security.SafeNonNullQuery(query, quotes_count, OpenConnection, CloseConnection);
         }
 
         public static void QueryCommandGeneral(string query)

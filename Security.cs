@@ -37,18 +37,20 @@ namespace Nokia
         //counts the number of ' characters in a query to prevent injection
         public delegate bool BoolF();
 
-        public static bool SafeNonNullQuery(string query, int quotes_count, NpgsqlConnection connection,BoolF OpenConnection,BoolF CloseConnection)
+
+        public static bool SafeNonNullQuery(string query, int quotes_count, BoolF OpenConnection,BoolF CloseConnection)
         {
             //counts the number of ' chars
+
             if (query.Count(c => c == '\'') != quotes_count)
-                return false;
+				return false;
 
             if (!OpenConnection())
                 return false;
 
-            NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+            NpgsqlCommand cmd = new NpgsqlCommand(query, DbCon.getConnection());
             
-            MessageBox.Show(query);
+            //MessageBox.Show(query);
 
             bool existsUser = (bool)cmd.ExecuteScalar();
 
@@ -56,5 +58,14 @@ namespace Nokia
   
             return existsUser;
         }
-    }
+
+		//private static int count(this char[] str, char c)
+		//{
+		//	int k = 0;
+		//	for (int i = 0; i < str.Length; i++)
+		//		if (str[i] == c)
+		//			k++;
+		//	return k;
+		//}
+	}
 }
