@@ -1,53 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rares\\GitHub\\Nokia-project\\",
+  "WorkspaceRootPath": "C:\\Users\\rares\\Github\\Nokia-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|c:\\users\\rares\\github\\nokia-project\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\dbcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|c:\\users\\rares\\github\\nokia-project\\dbcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:dbcon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|c:\\users\\rares\\github\\nokia-project\\applicationpages\\backlogmodule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:applicationpages\\backlogmodule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|c:\\users\\rares\\github\\nokia-project\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|c:\\users\\rares\\github\\nokia-project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|c:\\users\\rares\\github\\nokia-project\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\Login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\Login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:Login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\GitHub\\Nokia-project\\CreateAnAccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\applicationpages\\backlogmodule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:applicationpages\\backlogmodule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|C:\\Users\\rares\\Github\\Nokia-project\\CreateAnAccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27DC9D92-494A-4BE4-A837-918025ED6414}|Nokia.csproj|solutionrelative:CreateAnAccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,60 +66,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Security.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\Security.cs",
-              "RelativeDocumentMoniker": "Security.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\Security.cs",
-              "RelativeToolTip": "Security.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACoAAAAqAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserDB.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\UserDB.cs",
+              "RelativeDocumentMoniker": "UserDB.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\UserDB.cs",
+              "RelativeToolTip": "UserDB.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T11:08:12.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T10:33:51.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
+              "Title": "Security.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\Security.cs",
+              "RelativeDocumentMoniker": "Security.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\Security.cs",
+              "RelativeToolTip": "Security.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T11:08:12.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-30T07:57:47.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\App.config",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\App.config",
               "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\App.config",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\App.config",
               "RelativeToolTip": "App.config",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAA9AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-04-19T13:40:40.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Login.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\Login.xaml.cs",
               "RelativeDocumentMoniker": "Login.xaml.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\Login.xaml.cs",
               "RelativeToolTip": "Login.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T11:04:14.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T11:04:14.504Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "CreateAnAccount.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\CreateAnAccount.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\CreateAnAccount.xaml.cs",
               "RelativeDocumentMoniker": "CreateAnAccount.xaml.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\CreateAnAccount.xaml.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\CreateAnAccount.xaml.cs",
               "RelativeToolTip": "CreateAnAccount.xaml.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAAAEMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -127,91 +137,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "DbCon.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\DbCon.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\DbCon.cs",
               "RelativeDocumentMoniker": "DbCon.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\DbCon.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\DbCon.cs",
               "RelativeToolTip": "DbCon.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAAAHIAAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T10:33:51.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\App.xaml",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-07T09:57:55.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T09:57:55.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T09:57:56.277Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T09:57:56.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserDB.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\UserDB.cs",
-              "RelativeDocumentMoniker": "UserDB.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\UserDB.cs",
-              "RelativeToolTip": "UserDB.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T10:33:51.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "BacklogModule.xaml",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\ApplicationPages\\BacklogModule.xaml",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\ApplicationPages\\BacklogModule.xaml",
               "RelativeDocumentMoniker": "ApplicationPages\\BacklogModule.xaml",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\ApplicationPages\\BacklogModule.xaml",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\ApplicationPages\\BacklogModule.xaml",
               "RelativeToolTip": "ApplicationPages\\BacklogModule.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-07T09:51:24.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T09:51:24.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\Login.xaml",
+              "RelativeDocumentMoniker": "Login.xaml",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\Login.xaml",
+              "RelativeToolTip": "Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-07T09:53:58.357Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\Login.xaml",
-              "RelativeDocumentMoniker": "Login.xaml",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\Login.xaml",
-              "RelativeToolTip": "Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-07T09:53:58.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UserLogin.cs",
-              "DocumentMoniker": "C:\\Users\\rares\\GitHub\\Nokia-project\\UserLogin.cs",
+              "DocumentMoniker": "C:\\Users\\rares\\Github\\Nokia-project\\UserLogin.cs",
               "RelativeDocumentMoniker": "UserLogin.cs",
-              "ToolTip": "C:\\Users\\rares\\GitHub\\Nokia-project\\UserLogin.cs",
+              "ToolTip": "C:\\Users\\rares\\Github\\Nokia-project\\UserLogin.cs",
               "RelativeToolTip": "UserLogin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T10:33:51.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T10:33:51.192Z"
             }
           ]
         }
