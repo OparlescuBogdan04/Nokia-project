@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Create a new account" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
-        <Image HorizontalAlignment="Center" Height="84" Margin="0,25,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
+        <Image HorizontalAlignment="Center" Height="84" Margin="0,25,0,0" VerticalAlignment="Top" Width="362" Source="/Artwork/nokia_white.png"/>
 
         <!--Error message block-->
         <TextBlock x:Name="_ErrorMsg" Style="{StaticResource Error_TextBlock}"  Margin="0,118,0,0" Text=""/>
@@ -32,6 +32,6 @@
 
         <!--Create a new account-->
         <Button Content="Create a new account" Style="{StaticResource TransparentStyle}" Foreground="Aqua" HorizontalAlignment="Center" Margin="0,352,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-
+        
     </Grid>
 </Window>

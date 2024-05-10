@@ -112,7 +112,7 @@ namespace Nokia
 
         public static bool SafeNonNullQuery(string query,int quotes_count)
         {
-			return Security.SafeNonNullQuery(query, quotes_count, OpenConnection, CloseConnection);
+			return Security.SafeNonNullQuery(query, quotes_count, NonNullQuery);
         }
 
         public static void QueryCommandGeneral(string query)

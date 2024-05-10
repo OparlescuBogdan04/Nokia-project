@@ -19,7 +19,9 @@ namespace Nokia.ApplicationPages
     /// </summary>
     public partial class EditEntry : Window
     {
-        public class Entry
+        //parent backlog
+        public BacklogModule BacklogModule;
+        public struct Entry
         {
             public string Owner;
             public string Status;
@@ -42,11 +44,16 @@ namespace Nokia.ApplicationPages
             InitializeComponent();
         }
 
+        void AddTableEntry(Entry entry)
+        {
+            BacklogModule.AddTableEntry(entry);
+            BacklogModule.RefreshTable();
+        }
+
         private void _Done_Click(object sender, RoutedEventArgs e)
         {
             Entry entry = new Entry(_Owner.Text, _Status.Text,_Jira.Text, _Defect.Text, _Prio.Text);
-            //To Do
-            //send this entry to Jira
+            AddTableEntry(entry);
         }
     }
 }

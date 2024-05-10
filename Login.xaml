@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
-        <Image HorizontalAlignment="Center" Height="84" Margin="0,50,0,0" VerticalAlignment="Top" Width="362" Source="/nokia_white.png"/>
+        <Image HorizontalAlignment="Center" Height="84" Margin="0,50,0,0" VerticalAlignment="Top" Width="362" Source="/Artwork/nokia_white.png"/>
 
         <!--Error msg-->
         <TextBlock x:Name="_ErrorMsg" Style="{StaticResource Error_TextBlock}" Margin="0,180,0,0" Text=""/>

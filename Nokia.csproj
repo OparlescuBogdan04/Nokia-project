@@ -201,8 +201,5 @@
   <ItemGroup>
     <Resource Include="Artwork\nokia_white.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="nokia_white.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

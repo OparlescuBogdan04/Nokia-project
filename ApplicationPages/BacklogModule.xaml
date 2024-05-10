@@ -10,12 +10,12 @@
         <!--Data Table-->
         <DataGrid x:Name="_DataTable" AutoGenerateColumns="False"  Margin="64,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="230" Width="510">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="TC Name" Width="*"/>
-                <DataGridTextColumn Header="Owner" Width="*"/>
-                <DataGridTextColumn Header="Status" Width="*"/>
-                <DataGridTextColumn Header="Jira" Width="*"/>
-                <DataGridTextColumn Header="Defect" Width="*"/>
-                <DataGridTextColumn Header="Prio" Width="*"/>
+                <!--<DataGridTextColumn Header="TC Name" Width="*"/>-->
+                <DataGridTextColumn x:Name="Header" Header="Owner" Width="*"/>
+                <DataGridTextColumn x:Name="Status" Header="Status" Width="*"/>
+                <DataGridTextColumn x:Name="Jira" Header="Jira" Width="*"/>
+                <DataGridTextColumn x:Name="Defect" Header="Defect" Width="*"/>
+                <DataGridTextColumn x:Name="Priority" Header="Prio" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
