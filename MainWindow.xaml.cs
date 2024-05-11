@@ -35,5 +35,10 @@ namespace Nokia
         {
             this.SwitchTo(new BacklogModule());
         }
+
+        private void _Profile_Click(object sender, RoutedEventArgs e)
+        {
+            this.SwitchTo(new Profile());
+        }
     }
 }

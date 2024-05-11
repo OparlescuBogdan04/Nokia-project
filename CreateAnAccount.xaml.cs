@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nokia.ApplicationPages;
+using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
@@ -71,6 +72,8 @@ namespace Nokia
             }
 
             DbCon.InsertUser(username, email, password.Encrypt());
+            //To Do
+            Profile.SetCurrentUser(new User(username)); //change this to also include the password
             this.SwitchTo(new MainWindow());
         }
     }

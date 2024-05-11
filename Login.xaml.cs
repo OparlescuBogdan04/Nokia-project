@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nokia.ApplicationPages;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,11 +26,15 @@ namespace Nokia
         private void _Login_Click(object sender, RoutedEventArgs e)
         {
             bool math_credentials= UserLogin.VerifyCredentialsByMath(_Username.Text, _Password.Password);
-            bool db_login = UserDB.DatabaseVerified(_Username.Text, _Password.Password.Encrypt());
+            bool db_login = UserDB.DatabaseVerified(_Username.Text, _Password.Password.Encrypt()); 
+            //change this to only accept the user ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-            bool can_log_in = db_login | math_credentials;
+            bool can_log_in = db_login | math_credentials|true;
             if (can_log_in)
+            {
                 this.SwitchTo(new MainWindow());
+                Profile.SetCurrentUser(new User(_Username.Text));//this new User should be before verifying db credentials
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

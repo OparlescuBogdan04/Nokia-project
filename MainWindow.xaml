@@ -24,6 +24,7 @@
         <Button x:Name="_Reverts" Content="Reverts" HorizontalAlignment="Center" Margin="400,160,0,0" VerticalAlignment="Top" Width="124"/>
         <Button x:Name="_Statistics" Content="Statistics" HorizontalAlignment="Center" Margin="400,180,0,0" VerticalAlignment="Top" Width="124"/>
         <Button x:Name="_TeamManagement" Content="Team Management" HorizontalAlignment="Center" Margin="400,220,0,0" VerticalAlignment="Top" Width="124"/>
+        <Button x:Name="_Profile" Content="Profile" HorizontalAlignment="Left" Margin="653,21,0,0" VerticalAlignment="Top" Width="124" Click="_Profile_Click" />
 
     </Grid>
 </Window>
