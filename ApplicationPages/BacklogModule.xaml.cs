@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static Nokia.ApplicationPages.EditEntry;
 
 namespace Nokia.ApplicationPages
 {
@@ -28,7 +29,7 @@ namespace Nokia.ApplicationPages
         ///<summary>
         ///Backlog Module function for adding a new table entry
         ///</summary>
-        public void AddTableEntry(EditEntry.Entry entry)
+        public void AddTableEntry(Entry entry)
         {
             _DataTable.Items.Add(entry);
         }

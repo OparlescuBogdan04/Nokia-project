@@ -9,14 +9,13 @@
         <Button Style="{StaticResource BackButton}"/>
 
         <!--Data Table-->
-        <DataGrid x:Name="_DataTable" AutoGenerateColumns="False"  Margin="64,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="230" Width="510">
+        <DataGrid x:Name="_DataTable" AutoGenerateColumns="False" Margin="64,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="230" Width="510">
             <DataGrid.Columns>
-                <!--<DataGridTextColumn Header="TC Name" Width="*"/>-->
-                <DataGridTextColumn x:Name="Header" Header="Owner" Width="*"/>
-                <DataGridTextColumn x:Name="Status" Header="Status" Width="*"/>
-                <DataGridTextColumn x:Name="Jira" Header="Jira" Width="*"/>
-                <DataGridTextColumn x:Name="Defect" Header="Defect" Width="*"/>
-                <DataGridTextColumn x:Name="Priority" Header="Prio" Width="*"/>
+                <DataGridTextColumn Header="Owner" Binding="{Binding Owner}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                <DataGridTextColumn Header="Jira" Binding="{Binding Jira}" Width="*"/>
+                <DataGridTextColumn Header="Defect" Binding="{Binding Defect}" Width="*"/>
+                <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 

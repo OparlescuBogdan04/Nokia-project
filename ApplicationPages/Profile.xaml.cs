@@ -24,12 +24,33 @@ namespace Nokia.ApplicationPages
         public Profile()
         {
             InitializeComponent();
+            try
+            {
+                InitializeFields();
+            }
+            catch { }
+        }
+
+        void InitializeFields()
+        {
             _Name.Text += user.name;
         }
 
         public static void SetCurrentUser(User user)
         {
             Profile.user = user;
+        }
+
+        public static void LogOut()
+        {
+            SetCurrentUser(null);
+            Window current_window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
+            current_window.SwitchTo(new Login());
+        }
+
+        private void _Logout_Click(object sender, RoutedEventArgs e)
+        {
+            LogOut();
         }
     }
 }

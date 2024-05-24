@@ -23,19 +23,19 @@ namespace Nokia.ApplicationPages
         public BacklogModule BacklogModule;
         public struct Entry
         {
-            public string Owner;
-            public string Status;
-            public string Jira;
-            public string Defect;
-            public string Priority;
+            public string Owner { get; set; }
+            public string Status { get; set; }
+            public string Jira { get; set; }
+            public string Defect { get; set; }
+            public string Priority { get; set; }
 
-            public Entry(string owner, string status, string jira, string defect, string priority)
+            public Entry(string Owner, string Status, string Jira, string Defect, string Priority)
             {
-                Owner = owner;
-                Status = status;
-                Jira = jira;
-                Defect = defect;
-                Priority = priority;
+                this.Owner = Owner;
+                this.Status = Status;
+                this.Jira = Jira;
+                this.Defect = Defect;
+                this.Priority = Priority;
             }
         }
 
@@ -52,8 +52,7 @@ namespace Nokia.ApplicationPages
 
         private void _Done_Click(object sender, RoutedEventArgs e)
         {
-            Entry entry = new Entry(_Owner.Text, _Status.Text,_Jira.Text, _Defect.Text, _Prio.Text);
-            AddTableEntry(entry);
+            AddTableEntry(new Entry(_Owner.Text, _Status.Text, _Jira.Text, _Defect.Text, _Prio.Text));
         }
     }
 }
