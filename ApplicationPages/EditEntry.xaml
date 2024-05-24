@@ -10,23 +10,23 @@
         <Grid x:Name="__Fields">
             <!--Owner-->
             <TextBlock Text="Owner:" Style="{StaticResource White_Textblock}" Margin="0,20,0,0" />
-            <TextBox x:Name="_Owner" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="_Owner" Style="{StaticResource _TextBox}" Margin="0,40,0,0"/>
 
             <!--Status-->
             <TextBlock Text="Status:" Style="{StaticResource White_Textblock}" Margin="0,60,0,0" />
-            <TextBox x:Name="_Status" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="_Status" Style="{StaticResource _TextBox}" Margin="0,80,0,0"/>
 
             <!--Jira-->
             <TextBlock Text="Jira:" Style="{StaticResource White_Textblock}" Margin="0,100,0,0" />
-            <TextBox x:Name="_Jira" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="_Jira" Style="{StaticResource _TextBox}" Margin="0,120,0,0"/>
 
             <!--Defect-->
             <TextBlock Text="Defect:" Style="{StaticResource White_Textblock}" Margin="0,140,0,0" />
-            <TextBox x:Name="_Defect" HorizontalAlignment="Center" Margin="0,160,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="_Defect" Style="{StaticResource _TextBox}" Margin="0,160,0,0"/>
 
             <!--Priority-->
             <TextBlock Text="Prio:" Style="{StaticResource White_Textblock}" Margin="0,180,0,0" />
-            <TextBox x:Name="_Prio" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="_Prio" Style="{StaticResource _TextBox}" Margin="0,200,0,0"/>
         </Grid>
 
         <Button x:Name="_Done" Content="Done" HorizontalAlignment="Center" Margin="0,235,0,0" VerticalAlignment="Top" Width="80" Click="_Done_Click"/>

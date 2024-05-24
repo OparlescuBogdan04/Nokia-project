@@ -7,18 +7,23 @@
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
-        <Image HorizontalAlignment="Center" Height="84" Margin="0,50,0,0" VerticalAlignment="Top" Width="362" Source="/Artwork/nokia_white.png"/>
+        <Image Style="{StaticResource NokiaLogoImgStyle}" Margin="0,50,0,0"/>
 
         <!--Error msg-->
         <TextBlock x:Name="_ErrorMsg" Style="{StaticResource Error_TextBlock}" Margin="0,180,0,0" Text=""/>
 
+        <!--Username-->
         <TextBlock Style="{StaticResource White_Textblock}" Margin="0,202,0,0" Text="Username:"/>
-        <TextBox x:Name="_Username" HorizontalAlignment="Center" Margin="0,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="_Username" Style="{StaticResource _TextBox}" Margin="0,222,0,0" Width="180"/>
 
+        <!--Password-->
         <TextBlock Style="{StaticResource White_Textblock}" Margin="0,244,0,0" Text="Password:" MouseEnter="_ShowPassword" MouseLeave="_HidePassword"/>
-        <PasswordBox x:Name="_Password" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" Width="180"/>
+        <PasswordBox x:Name="_Password" Style="{StaticResource _Passwordbox}" Margin="0,260,0,0" Width="180"/>
 
+        <!--Login Button-->
         <Button x:Name="_Login" Content="Login" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Click="_Login_Click" Height="20" Width="80"/>
+        
+        <!--Create a new account Button-->
         <Button x:Name="_CreateANewAccount" Style="{StaticResource TransparentStyle}" Content="create a new account" FontSize="8" Foreground="Turquoise" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>

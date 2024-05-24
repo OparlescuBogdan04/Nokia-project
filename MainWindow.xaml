@@ -18,13 +18,13 @@
             <TextBlock Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,220,0,0" Text="Stability Guardians: "/>
         </Grid>
 
+        <Button x:Name="_Profile" Content="Profile" HorizontalAlignment="Center" Margin="400,40,0,0" VerticalAlignment="Top" Width="124" Click="_Profile_Click" />
         <Button x:Name="_Monitoring" Content="Monitoring" HorizontalAlignment="Center" Margin="400,80,0,0" VerticalAlignment="Top" Width="124" Click="_Monitoring_Click"/>
         <Button x:Name="_Backlog" Content="Backlog" HorizontalAlignment="Center" Margin="400,120,0,0" VerticalAlignment="Top" Width="124" Click="_Backlog_Click"/>
         <Button x:Name="_Defects" Content="Defects" HorizontalAlignment="Center" Margin="400,140,0,0" VerticalAlignment="Top" Width="124"/>
         <Button x:Name="_Reverts" Content="Reverts" HorizontalAlignment="Center" Margin="400,160,0,0" VerticalAlignment="Top" Width="124"/>
         <Button x:Name="_Statistics" Content="Statistics" HorizontalAlignment="Center" Margin="400,180,0,0" VerticalAlignment="Top" Width="124"/>
         <Button x:Name="_TeamManagement" Content="Team Management" HorizontalAlignment="Center" Margin="400,220,0,0" VerticalAlignment="Top" Width="124"/>
-        <Button x:Name="_Profile" Content="Profile" HorizontalAlignment="Left" Margin="653,21,0,0" VerticalAlignment="Top" Width="124" Click="_Profile_Click" />
 
     </Grid>
 </Window>

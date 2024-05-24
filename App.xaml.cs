@@ -13,5 +13,9 @@ namespace Nokia
     /// </summary>
     public partial class App : Application
     {
+        public void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window.GetWindow((DependencyObject)sender).SwitchTo(new MainWindow());
+        }
     }
 }

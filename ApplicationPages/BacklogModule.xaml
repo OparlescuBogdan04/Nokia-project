@@ -6,6 +6,7 @@
         mc:Ignorable="d"
         Title="Backlog Module" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
+        <Button Style="{StaticResource BackButton}"/>
 
         <!--Data Table-->
         <DataGrid x:Name="_DataTable" AutoGenerateColumns="False"  Margin="64,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="230" Width="510">

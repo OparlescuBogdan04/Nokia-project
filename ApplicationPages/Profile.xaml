@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Profile" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
+        <Button Style="{StaticResource BackButton}"/>
         <TextBlock x:Name="_Name" Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,140,0,0" Text="Name: "/>
     </Grid>
 </Window>
