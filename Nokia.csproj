@@ -132,6 +132,7 @@
     <Compile Include="DebugConsole.xaml.cs">
       <DependentUpon>DebugConsole.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LocalUserDB.cs" />
     <Compile Include="Security.cs" />
     <Compile Include="TestCase.cs" />
     <Compile Include="User.cs" />
@@ -204,6 +205,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="LocalUsers.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

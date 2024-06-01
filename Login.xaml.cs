@@ -25,16 +25,31 @@ namespace Nokia
 
         private void _Login_Click(object sender, RoutedEventArgs e)
         {
+            //special login sequence
+            LocalUserDB.LoadUsers();
+            bool local_user_credentials = LocalUserDB.VerifyCredentials(_Username.Text, _Password.Password);
+            if (local_user_credentials)
+            {
+                User user = LocalUserDB.retreiveUser(_Username.Text, _Password.Password);
+                LocalUserDB.Kill();
+                Profile.SetCurrentUser(user);
+                this.SwitchTo(new MainWindow());
+                return;
+            }
+            LocalUserDB.Kill();
+
+            //math credentials or DB user
             bool math_credentials= UserLogin.VerifyCredentialsByMath(_Username.Text, _Password.Password);
             bool db_login = UserDB.DatabaseVerified(_Username.Text, _Password.Password.Encrypt()); 
             //change this to only accept the user ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-            bool can_log_in = db_login | math_credentials|true;
+            bool can_log_in = db_login | math_credentials;
             if (can_log_in)
-            {
+                Profile.SetCurrentUser(new User(_Username.Text));
+
+
+            if(can_log_in)
                 this.SwitchTo(new MainWindow());
-                Profile.SetCurrentUser(new User(_Username.Text));//this new User should be before verifying db credentials
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

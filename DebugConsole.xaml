@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nokia"
         mc:Ignorable="d"
-        Title="DebugConsole" Height="224" Width="400" ResizeMode="NoResize">
+        Title="DebugConsole" Height="250" Width="400" ResizeMode="NoResize" Background="Black">
     <Grid>
-        <TextBlock x:Name="_DebugConsole" HorizontalAlignment="Center" TextWrapping="Wrap" Text="AAAAAAAA" VerticalAlignment="Center" Height="208" Width="400" Background="Black" Foreground="CornflowerBlue"/>
+        <TextBlock x:Name="_DebugConsole" HorizontalAlignment="Center" TextWrapping="Wrap" Text="This is the Debug Console!" VerticalAlignment="Center" Height="200" Width="300" Background="Black" Foreground="CornflowerBlue"/>
 
     </Grid>
 </Window>

@@ -45,6 +45,11 @@ namespace Nokia.ApplicationPages
             Profile.user = user;
         }
 
+        public static User.UserType GetUserType()
+        {
+            return user.user_type;
+        }
+
         public static void LogOut()
         {
             SetCurrentUser(null);

@@ -16,5 +16,10 @@
             
             user_type = UserType.Normal; //this could be set by the UserDB
         }
+
+        public User(string name,UserType user_type):this(name)
+        {
+            this.user_type = user_type;
+        }
     }
 }
