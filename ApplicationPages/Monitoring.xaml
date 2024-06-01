@@ -8,7 +8,24 @@
         Title="Monitoring" Height="450" Width="800">
     <Grid Background="{StaticResource BackgroundGradient}">
         <Button Style="{StaticResource BackButton}"/>
-        <TextBlock Text="This is the monitoring page!" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <!--TabControl-->
+        <TabControl Margin="0,-50,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="300" Width="500">
+            <!--Retest Tool-->
+            <TabItem Header="Retest Tool">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <!--CI Guard-->
+            <TabItem Header="CI Guard">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <!--Nightly Stability-->
+            <TabItem Header="Nightly Stability">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+        <!--Analyze-->
         <Button x:Name="_Analyze" Content="Analyze" FontSize="16" HorizontalAlignment="Center" Margin="0,364,0,0" VerticalAlignment="Top" Height="30" Width="200"/>
     </Grid>
 </Window>

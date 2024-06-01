@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("nokia_white.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("applicationpages/defaultuser.png")]
 
 

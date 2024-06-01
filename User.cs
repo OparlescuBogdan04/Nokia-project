@@ -3,6 +3,7 @@
     public class User
     {
         public string name;
+        public string email;
         public int id { get; }
         public enum UserType { Normal,Admin,Programmer};  
         public UserType user_type { get; }

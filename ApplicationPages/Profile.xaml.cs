@@ -24,6 +24,9 @@ namespace Nokia.ApplicationPages
         public Profile()
         {
             InitializeComponent();
+
+            if (user == null)
+                return;
             try
             {
                 InitializeFields();
@@ -34,6 +37,7 @@ namespace Nokia.ApplicationPages
         void InitializeFields()
         {
             _Name.Text += user.name;
+            _Email.Text += user.email;
         }
 
         public static void SetCurrentUser(User user)

@@ -29,7 +29,7 @@ namespace Nokia.ApplicationPages
         ///<summary>
         ///Backlog Module function for adding a new table entry
         ///</summary>
-        public void AddTableEntry(Entry entry)
+        public void AddTableEntry(TestCase entry)
         {
             _DataTable.Items.Add(entry);
         }

@@ -202,3 +202,5 @@ C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\BacklogModule.g.c
 C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\EditEntry.g.cs
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Profile.g.cs
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Profile.baml
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Statistics.g.cs
+C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Statistics.baml

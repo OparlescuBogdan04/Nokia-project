@@ -21,30 +21,13 @@ namespace Nokia.ApplicationPages
     {
         //parent backlog
         public BacklogModule BacklogModule;
-        public struct Entry
-        {
-            public string Owner { get; set; }
-            public string Status { get; set; }
-            public string Jira { get; set; }
-            public string Defect { get; set; }
-            public string Priority { get; set; }
-
-            public Entry(string Owner, string Status, string Jira, string Defect, string Priority)
-            {
-                this.Owner = Owner;
-                this.Status = Status;
-                this.Jira = Jira;
-                this.Defect = Defect;
-                this.Priority = Priority;
-            }
-        }
 
         public EditEntry()
         {
             InitializeComponent();
         }
 
-        void AddTableEntry(Entry entry)
+        void AddTableEntry(TestCase entry)
         {
             BacklogModule.AddTableEntry(entry);
             BacklogModule.RefreshTable();
@@ -52,7 +35,7 @@ namespace Nokia.ApplicationPages
 
         private void _Done_Click(object sender, RoutedEventArgs e)
         {
-            AddTableEntry(new Entry(_Owner.Text, _Status.Text, _Jira.Text, _Defect.Text, _Prio.Text));
+            AddTableEntry(new TestCase(_Owner.Text, _Status.Text, _Jira.Text, _Defect.Text, _Prio.Text));
         }
     }
 }

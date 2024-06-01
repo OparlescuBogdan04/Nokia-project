@@ -40,5 +40,10 @@ namespace Nokia
         {
             this.SwitchTo(new Profile());
         }
+
+        private void _Statistics_Click(object sender, RoutedEventArgs e)
+        {
+            this.SwitchTo(new Statistics());
+        }
     }
 }
