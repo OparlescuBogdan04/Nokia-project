@@ -1,21 +1,10 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using System.Windows.Controls;
 
 namespace Nokia
 {
     public static class UserLogin
     {
-        public const int min_username_length= 2;
-        public const int min_password_length = 4;
-
-        public static void LogMessage(TextBlock block,string message)
-        {
-            //To Do
-            block.Text = message;
-            //set block message color
-        }
-
         public static bool IsValidEmailFormat(string email)
         {
             string pattern = @"^[a-zA-Z0-9+&*-]+(?:\.[a-zA-Z0-9+&-]+)@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}$";

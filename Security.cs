@@ -41,14 +41,5 @@ namespace Nokia
 
             return function(query);
         }
-
-		//private static int count(this char[] str, char c)
-		//{
-		//	int k = 0;
-		//	for (int i = 0; i < str.Length; i++)
-		//		if (str[i] == c)
-		//			k++;
-		//	return k;
-		//}
 	}
 }
