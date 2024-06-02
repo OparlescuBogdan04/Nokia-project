@@ -5,6 +5,9 @@ namespace Nokia
 {
     public static class UserLogin
     {
+        public const int min_username_length = 2;
+        public const int min_password_length = 4;
+
         public static bool IsValidEmailFormat(string email)
         {
             string pattern = @"^[a-zA-Z0-9+&*-]+(?:\.[a-zA-Z0-9+&-]+)@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}$";

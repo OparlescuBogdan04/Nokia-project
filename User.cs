@@ -1,5 +1,6 @@
 ﻿namespace Nokia
 {
+    [System.Serializable]
     public class User
     {
         public string name;
@@ -12,6 +13,11 @@
         {
             this.name = name; 
             user_type = UserType.Normal;
+        }
+
+        public User(string name, string password) : this(name)
+        {
+            this.password = password;
         }
 
         public User(string name,UserType user_type):this(name)

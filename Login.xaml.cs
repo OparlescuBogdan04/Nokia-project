@@ -21,6 +21,22 @@ namespace Nokia
         public Login()
         {
             InitializeComponent();
+            RecurringUserLogin();
+        }
+
+        private void RecurringUserLogin()
+        {
+            try
+            {
+                if (RecurringUser.ExistingCredentialsFile())
+                {
+                    User user = RecurringUser.ReadFile();
+                    _Username.Text = user.name;
+                    _Password.Password = user.password;
+                    _Login_Click(null, new RoutedEventArgs());
+                }
+            }
+            catch { return; }
         }
 
         private void _Login_Click(object sender, RoutedEventArgs e)
@@ -45,7 +61,7 @@ namespace Nokia
 
             bool can_log_in = db_login | math_credentials;
             if (can_log_in)
-                Profile.SetCurrentUser(new User(_Username.Text));
+                Profile.SetCurrentUser(new User(_Username.Text,_Password.Password));
 
 
             if(can_log_in)

@@ -133,6 +133,7 @@
       <DependentUpon>DebugConsole.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalUserDB.cs" />
+    <Compile Include="RecurringUser.cs" />
     <Compile Include="Security.cs" />
     <Compile Include="TestCase.cs" />
     <Compile Include="User.cs" />

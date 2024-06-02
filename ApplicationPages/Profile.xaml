@@ -18,6 +18,9 @@
         <!--Email-->
         <TextBlock x:Name="_Email" Style="{StaticResource White_Textblock}" FontSize="14" Margin="0,160,0,0" Text="Email: "/>
         
+        <!--Recurring User Button-->
+        <Button x:Name="_RecurringUser" Content="Save Recurring User" HorizontalAlignment="Right" Margin="0,123,30,0" VerticalAlignment="Top" Width="120" Click="_RecurringUser_Click"/>
+        
         <!--Logout Button-->
         <Button x:Name="_Logout" Content="Log Out" HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" Click="_Logout_Click"/>
 

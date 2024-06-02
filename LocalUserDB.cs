@@ -23,7 +23,7 @@ namespace Nokia
 
             public User toUser()
             {
-                return new User(name, type);
+                return new User(name,password, type);
             }
         }
 

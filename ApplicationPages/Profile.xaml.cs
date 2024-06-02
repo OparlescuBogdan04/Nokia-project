@@ -61,5 +61,10 @@ namespace Nokia.ApplicationPages
         {
             LogOut();
         }
+
+        private void _RecurringUser_Click(object sender, RoutedEventArgs e)
+        {
+            RecurringUser.WriteFile(user);
+        }
     }
 }
