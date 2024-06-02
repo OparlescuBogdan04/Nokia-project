@@ -54,7 +54,7 @@ namespace Nokia.ApplicationPages
         {
             SetCurrentUser(null);
             Window current_window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
-            current_window.SwitchTo(new Login());
+            current_window.SwitchTo(new Login(false));
         }
 
         private void _Logout_Click(object sender, RoutedEventArgs e)

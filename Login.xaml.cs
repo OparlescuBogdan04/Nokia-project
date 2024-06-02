@@ -18,10 +18,12 @@ namespace Nokia
 {
     public partial class Login : Window
     {
-        public Login()
+        public Login() : this(true) { }
+        public Login(bool recurring)
         {
             InitializeComponent();
-            RecurringUserLogin();
+            if(recurring)
+                RecurringUserLogin();
         }
 
         private void RecurringUserLogin()
