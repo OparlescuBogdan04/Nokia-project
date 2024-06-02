@@ -31,7 +31,7 @@ namespace Nokia
         {
             try
             {
-                FileStream file_stream = new FileStream(recurring_user_file_path, FileMode.CreateNew, FileAccess.Write);
+                FileStream file_stream = new FileStream(recurring_user_file_path, FileMode.OpenOrCreate, FileAccess.Write);
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(file_stream, user);
                 file_stream.Close();

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 
 namespace Nokia
 {
@@ -7,7 +8,7 @@ namespace Nokia
 
         public static void TerminalLog(string message)
         {
-            DebugConsole.Instance.log(message);
+            DebugConsole.Instance.Log(message);
         }
 
         public static void CreateNewInstance(Window window)
@@ -23,6 +24,11 @@ namespace Nokia
             current.Hide();
             new_window.Left = left;
             new_window.Top = top;
+        }
+
+        public static void DebugWindow()
+        {
+            DebugConsole.ShowConsole();
         }
     }
 }

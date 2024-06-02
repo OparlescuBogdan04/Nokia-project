@@ -25,7 +25,7 @@ namespace Nokia
         {
             InitializeComponent();
             if (Profile.GetUserType() == User.UserType.Programmer)
-                WindowDialogue.CreateNewInstance(new DebugConsole());
+                WindowDialogue.DebugWindow();
         }
 
         private void _Monitoring_Click(object sender, RoutedEventArgs e)
