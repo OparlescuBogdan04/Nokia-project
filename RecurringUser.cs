@@ -16,27 +16,19 @@ namespace Nokia
 
         public static User ReadFile()
         {
-            try
-            {
-                FileStream file_stream = new FileStream(recurring_user_file_path, FileMode.Open, FileAccess.Read);
-                BinaryFormatter bf = new BinaryFormatter();
-                User user = (User)bf.Deserialize(file_stream);
-                file_stream.Close();
-                return user;
-            }
-            catch(Exception e) { MessageBox.Show(e.Message); return null; }
+            FileStream file_stream = new FileStream(recurring_user_file_path, FileMode.Open, FileAccess.Read);
+            BinaryFormatter bf = new BinaryFormatter();
+            User user = (User)bf.Deserialize(file_stream);
+            file_stream.Close();
+            return user;
         }
 
         public static void WriteFile(User user)
         {
-            try
-            {
-                FileStream file_stream = new FileStream(recurring_user_file_path, FileMode.OpenOrCreate, FileAccess.Write);
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(file_stream, user);
-                file_stream.Close();
-            }
-            catch (Exception e) { MessageBox.Show(e.Message); }
+            FileStream file_stream = new FileStream(recurring_user_file_path, FileMode.OpenOrCreate, FileAccess.Write);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(file_stream, user);
+            file_stream.Close();
         }
     }
 }

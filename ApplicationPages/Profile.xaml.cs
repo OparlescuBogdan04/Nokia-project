@@ -52,6 +52,7 @@ namespace Nokia.ApplicationPages
 
         public static void LogOut()
         {
+            WindowDialogue.TerminalLog($"Logged User: {user.name} out!");
             SetCurrentUser(null);
             Window current_window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
             current_window.SwitchTo(new Login(false));

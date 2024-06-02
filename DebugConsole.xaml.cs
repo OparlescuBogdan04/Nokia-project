@@ -45,7 +45,8 @@ namespace Nokia
 
             instance = new DebugConsole();
             instance.Show();
-            instance.Closed += (sender, args) => instance = null;
+            //instance.Closed += (sender, args) => instance = null;
         }
+
     }
 }
