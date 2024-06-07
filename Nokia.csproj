@@ -128,7 +128,8 @@
     <Compile Include="CreateAnAccount.xaml.cs">
       <DependentUpon>CreateAnAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DbCon.cs" />
+    <Compile Include="DB_CONNECTION.cs" />
+    <Compile Include="DB_MANAGER.cs" />
     <Compile Include="DebugConsole.xaml.cs">
       <DependentUpon>DebugConsole.xaml</DependentUpon>
     </Compile>

@@ -71,8 +71,7 @@ namespace Nokia
                 return;
             }
 
-            DbCon.InsertUser(username, email, password.Encrypt());
-            //To Do
+            UserDB.InsertUser(username, email, password.Encrypt());
             Profile.SetCurrentUser(new User(username,password,email,User.UserType.Normal));
             this.SwitchTo(new MainWindow());
         }
