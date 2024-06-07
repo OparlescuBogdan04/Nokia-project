@@ -59,17 +59,6 @@ namespace Nokia
             }
         }
 
-        public void InsertUser(string username, string email, string password)
-        {
-            string Team = "default";
-
-            string Admin = "false";
-
-            string query = $"INSERT INTO \"LoginTB\" (username, email, team, admin, password) VALUES ('{username}', '{email}', '{Team}', '{Admin}', '{password}')";
-
-            QueryCommandGeneral(query);
-        }
-
         public bool NonNullQuery(string query)
         {
 			if (OpenConnection() == true)
