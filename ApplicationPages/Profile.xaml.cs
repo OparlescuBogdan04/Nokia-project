@@ -24,6 +24,7 @@ namespace Nokia.ApplicationPages
         public Profile()
         {
             InitializeComponent();
+            WindowDialogue.TerminalLog("Welcome to the Profile page!");
 
             if (user == null)
                 return;
@@ -54,6 +55,7 @@ namespace Nokia.ApplicationPages
         {
             WindowDialogue.TerminalLog($"Logged User: {user.name} out!");
             SetCurrentUser(null);
+            DebugConsole.CloseDebugWindow();
             Window current_window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
             current_window.SwitchTo(new Login(false));
         }

@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="DebugConsole" Height="250" Width="400" ResizeMode="NoResize" Background="Black">
     <Grid>
+        
+        <!--Termianl-->
         <TextBlock x:Name="_DebugConsole" HorizontalAlignment="Center" TextWrapping="Wrap" Text="This is the Debug Console!" VerticalAlignment="Center" Height="200" Width="300" Background="Black" Foreground="CornflowerBlue"/>
 
     </Grid>
