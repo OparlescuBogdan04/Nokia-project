@@ -205,3 +205,8 @@ C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Profile.
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Statistics.g.cs
 C:\Users\User\Documents\GitHub\Nokia-project\obj\Debug\ApplicationPages\Statistics.baml
 C:\Users\User\Documents\GitHub\Nokia-project\bin\Debug\LocalUsers.csv
+C:\Users\rares\GitHub\Nokia-project\bin\Debug\LocalUsers.csv
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\Profile.g.cs
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\Statistics.g.cs
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\Profile.baml
+C:\Users\rares\GitHub\Nokia-project\obj\Debug\ApplicationPages\Statistics.baml
